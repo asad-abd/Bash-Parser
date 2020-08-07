@@ -1,0 +1,19 @@
+#!/bin/bash
+# Basic function
+print_something () {
+echo "Hello I am a function"
+}
+
+for (( a = 0 ; a <= 10 ; a++ )); 
+    if [[ $a -lt 5 ]]
+    then
+    echo "a is less than 5"
+    elif [[ $a -gt 5 && $a -lt 8 ]]
+    then
+    echo "a is between 5 and 7" 
+    else
+    echo "a is greater than 8"
+    fi
+done
+echo "calling function :"
+print_something

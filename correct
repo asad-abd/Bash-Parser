@@ -1,0 +1,24 @@
+#!/bin/bash
+# Basic function
+print_something () {
+echo "Hello I am a function"
+}
+
+counter=0
+echo "Enter your lucky number"
+read n
+
+if [ "$n" -lt 50 ];
+then
+    until [ "$counter" -gt 5 ]
+    do
+    echo "Counter: $counter"
+    counter=counter+1
+done
+elif [[ "$n" -gt 70 ]];
+then
+echo "number entered is greater than 70"
+else
+echo "calling function :"
+print_something
+fi
